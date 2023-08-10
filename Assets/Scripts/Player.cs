@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public float Speed = 5f;
     private Vector2 targetposition;
 
+    public GameObject RestartPanel;
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,8 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
+
+            RestartPanel.SetActive(true);
 
         }
     }
